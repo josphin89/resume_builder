@@ -37,19 +37,19 @@
             <div class="mb-4 row">
                 <label for="input" class="col-sm-2 col-form-label" >Email:</label>
                 <div class="col-sm-6">
-                  <input type="email" class="form-control" id="input" onkeyup="addValue(this,'email')">
+                  <input type="email" class="form-control" id="input" onkeyup="addValue(this,'email',null)">
                 </div>
             </div>
             <div class="mb-4 row">
                 <label for="inputobjective" class="col-sm-2 col-form-label" >Objective:</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="inputobjective" onkeyup="addValue(this,'objective')">
+                  <input type="text" class="form-control" id="inputobjective" onkeyup="addValue(this,'objective',null)">
                 </div>
             </div>
             <div class="mb-4 row">
               <label for="input" class="col-sm-2 col-form-label" >Phone number:</label>
               <div class="col-sm-6">
-                <input type="number" class="form-control" id="input" onkeyup="addValue(this,'phonenumber','null')">
+                <input type="number" class="form-control" id="input" onkeyup="addValue(this,'phonenumber',null)">
               </div>
             </div>
           </div>
@@ -116,49 +116,58 @@
 
                 <div class="row mt-3">
                    
-                    <div class="col-3">
-                      <input type="text" id="input" class="form-control" placeholder="institution name">
+                    <div class="col-2">
+                      <input type="text" id="course_institute" class="form-control" placeholder="institution name"/>
                     </div>
-                    <div class="col-3">
-                        <input type="text" id="input" class="form-control" placeholder="course">
+                    <div class="col-2">
+                        <input type="text" id="course_name" class="form-control" placeholder="course">
                       </div>
-                      <div class="col-3">
-                        <input type="text" id="input" class="form-control" placeholder="year">
+                      <div class="col-2">
+                        <input type="text" id="course_year" class="form-control" placeholder="year">
+                      </div>
+                      <div class="col-2 mb-4">
+                        <input type="text" id="course_percentage" class="form-control" placeholder="percentage">
                       </div>
                       <div class="col-3 mb-4">
-                        <input type="text" id="input" class="form-control" placeholder="percentage">
+                        <button onclick="addMultiValue('education','course_institute','course_name','course_year','course_percentage')" >add</button>
                       </div>
                 </div>
 
                 <div class="row mt-3">
                    
-                  <div class="col-3">
-                    <input type="text" id="input" class="form-control" placeholder="institution name">
+                  <div class="col-2">
+                    <input type="text" id="course_institute1" class="form-control" placeholder="institution name">
                   </div>
-                  <div class="col-3">
-                      <input type="text" id="input" class="form-control" placeholder="course">
+                  <div class="col-2">
+                      <input type="text" id="course_name1" class="form-control" placeholder="course">
                     </div>
-                    <div class="col-3">
-                      <input type="text" id="input" class="form-control" placeholder="year">
+                    <div class="col-2">
+                      <input type="text" id="course_year1" class="form-control" placeholder="year">
                     </div>
-                    <div class="col-3 mb-4">
-                      <input type="text" id="input" class="form-control" placeholder="percentage">
+                    <div class="col-2 mb-4">
+                      <input type="text" id="course_percentage1" class="form-control" placeholder="percentage">
+                    </div>
+                    <div class="col-2 mb-4">
+                      <button onclick="addMultiValue('education','course_institute1','course_name1','course_percentage1','course_year1')">add</button>
                     </div>
               </div>
 
               <div class="row mt-3">
                    
-                <div class="col-3">
-                  <input type="text" id="input" class="form-control" placeholder="institution name">
+                <div class="col-2">
+                  <input type="text" id="course_institute2" class="form-control" placeholder="institution name">
                 </div>
-                <div class="col-3">
-                    <input type="text" id="input" class="form-control" placeholder="course">
+                <div class="col-2">
+                    <input type="text" id="course_name2" class="form-control" placeholder="course">
                   </div>
-                  <div class="col-3">
-                    <input type="text" id="input" class="form-control" placeholder="year">
+                  <div class="col-2">
+                    <input type="text" id="course_year2" class="form-control" placeholder="year">
                   </div>
-                  <div class="col-3 mb-5">
-                    <input type="text" id="input" class="form-control" placeholder="percentage">
+                  <div class="col-2 mb-5">
+                    <input type="text" id="course_percentage2" class="form-control" placeholder="percentage">
+                  </div>
+                  <div class="col-2 mb-5">
+                    <button onclick="addMultiValue('education','course_institute2','course_name2','course_percentage2','course_year2')">add</button>
                   </div>
             </div>
 
@@ -166,15 +175,21 @@
                 <div>
                   <h4>Project</h4>
                   <div class="row mt-3">
-                    <div class="col-3 mb-4">
-                      <input type="text" id="input" class="form-control" placeholder="project title">
+                    <div class="col-2 mb-4">
+                      <input type="text" id="project_title" class="form-control" placeholder="project title">
+                    </div>
+                    <div class="col-2 mb-4">
+                      <input type="text" id="project_description" class="form-control" placeholder="project description">
                     </div>
                    
-                    <div class="col-3">
-                      <input type="text" id="input" class="form-control" placeholder="company name">
+                    <div class="col-2">
+                      <input type="text" id="project_company" class="form-control" placeholder="project company">
                     </div>
+                      <div class="col-2 mb-4">
+                        <input type="text" id="project_year" class="form-control" placeholder="year">
+                      </div>
                       <div class="col-3 mb-4">
-                        <input type="text" id="input" class="form-control" placeholder="year">
+                        <button onclick="addMultiValue('project','project_title','project_description','project_company','project_year')">add</button>
                       </div>
                 </div>
                 </div>
@@ -184,13 +199,16 @@
                   <div class="row mt-3">
                    
                     <div class="col-3">
-                      <input type="text" id="input" class="form-control" placeholder="company name">
+                      <input type="text" id="work_company" class="form-control" placeholder="company name">
                     </div>
                     <div class="col-3">
-                        <input type="text" id="input" class="form-control" placeholder="years">
+                        <input type="text" id="work_years" class="form-control" placeholder="years">
                       </div>
                       <div class="col-3 mb-5">
-                        <input type="text" id="input" class="form-control" placeholder="designation">
+                        <input type="text" id="work_designation" class="form-control" placeholder="designation">
+                      </div>
+                      <div class="col-3 mb-5">
+                        <button onclick="addMultiValue('work_experince','work_years_','work_designation')">add</button>
                       </div>
                       
                 </div>
